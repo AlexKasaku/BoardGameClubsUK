@@ -1,7 +1,6 @@
 ---
 name: "Board Game Night - Piranha Cafe"
-day: "Saturday"
-secondary_days: []
+days: ["Saturday"]
 time: "6:00pm - 10:00pm"
 frequency: "Weekly"
 location:

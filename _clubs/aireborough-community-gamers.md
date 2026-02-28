@@ -1,7 +1,6 @@
 ---
 name: "Aireborough Community Gamers"
-day: "Saturday"
-secondary_days: []
+days: ["Saturday"]
 time: "From 1:00pm til late"
 frequency: "Weekly"
 location:

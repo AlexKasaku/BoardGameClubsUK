@@ -1,7 +1,6 @@
 ---
 name: "Otley Board Gamers"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: "From 6:30pm"
 frequency: "Weekly"
 location:

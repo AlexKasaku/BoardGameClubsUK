@@ -1,7 +1,6 @@
 ---
 name: "Hastings and St Leonard's Board Games Night"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: "6:30pm - late"
 frequency: "Weekly"
 location:

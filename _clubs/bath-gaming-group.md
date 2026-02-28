@@ -1,7 +1,6 @@
 ---
 name: "Bath Gaming Group"
-day: "Tuesday"
-secondary_days: []
+days: ["Tuesday"]
 time: "7:30pm - 10:30pm"
 frequency: "Weekly"
 location:

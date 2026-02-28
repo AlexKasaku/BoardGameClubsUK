@@ -1,7 +1,6 @@
 ---
 name: "The Game Shack Beverley"
-day: "Thursday"
-secondary_days: ["Friday", "Saturday", "Sunday"]
+days: ["Thursday", "Friday", "Saturday", "Sunday"]
 time: "6:00pm - 9:00pm (1:00pm - 4:00pm weekends)"
 frequency: "Weekly"
 location:

@@ -1,7 +1,6 @@
 ---
 name: "Games in the Hall"
-day: "Various"
-secondary_days: []
+days: ["Various"]
 time: "6:00pm - 10:00pm"
 frequency: "Monthly"
 location:

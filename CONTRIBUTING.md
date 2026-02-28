@@ -14,8 +14,7 @@ Thanks for helping grow the GameClub directory! Here's how to contribute.
 ```yaml
 ---
 name: "Your Club Name"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: "7:00pm - 10:00pm"
 frequency: "Weekly"
 location:
@@ -37,8 +36,7 @@ description: >-
 | Field | Required | Notes |
 |-------|----------|-------|
 | `name` | Yes | Full club name |
-| `day` | Yes | Primary meeting day (Monday-Sunday) |
-| `secondary_days` | No | Array of additional days, e.g. `["Friday"]` |
+| `days` | Yes | Array of meeting days, e.g. `["Thursday"]` or `["Monday", "Friday"]` |
 | `time` | No | Meeting time, e.g. "7:00pm - 10:00pm" |
 | `frequency` | Yes | "Weekly", "Fortnightly", or "Monthly" (title-cased) |
 | `location.name` | Yes | Venue name |

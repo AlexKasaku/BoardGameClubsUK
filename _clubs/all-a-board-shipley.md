@@ -1,7 +1,6 @@
 ---
 name: "All A-board - Shipley Games Night"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: "7:00pm - 11:00pm"
 frequency: "Monthly"
 location:

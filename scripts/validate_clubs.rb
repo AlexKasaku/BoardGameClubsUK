@@ -76,22 +76,14 @@ files.each do |file|
     file_errors << "name: must be a non-empty string"
   end
 
-  # day: one of Monday–Sunday
-  if !data["day"].is_a?(String) || !VALID_DAYS.include?(data["day"])
-    file_errors << "day: must be one of #{VALID_DAYS.join(', ')} (got #{data['day'].inspect})"
-  end
-
-  # secondary_days: if present, array of valid day names
-  if data.key?("secondary_days")
-    sd = data["secondary_days"]
-    if sd.is_a?(Array)
-      sd.each_with_index do |d, i|
-        unless d.is_a?(String) && VALID_DAYS.include?(d)
-          file_errors << "secondary_days[#{i}]: must be one of #{VALID_DAYS.join(', ')} (got #{d.inspect})"
-        end
+  # days: non-empty array of valid day names
+  if !data["days"].is_a?(Array) || data["days"].empty?
+    file_errors << "days: must be a non-empty array of day names (got #{data['days'].inspect})"
+  elsif data["days"].is_a?(Array)
+    data["days"].each_with_index do |d, i|
+      unless d.is_a?(String) && VALID_DAYS.include?(d)
+        file_errors << "days[#{i}]: must be one of #{VALID_DAYS.join(', ')} (got #{d.inspect})"
       end
-    elsif !sd.nil?
-      file_errors << "secondary_days: must be an array (got #{sd.class})"
     end
   end
 

@@ -1,7 +1,6 @@
 ---
 name: "Ballymena Boardgame Group"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: "7:00pm - 10:30pm"
 frequency: "Weekly"
 location:

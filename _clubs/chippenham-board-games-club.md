@@ -1,7 +1,6 @@
 ---
 name: "Chippenham Board Games Club"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: "6:30pm - 11:00pm"
 frequency: "Weekly"
 location:

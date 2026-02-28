@@ -1,7 +1,6 @@
 ---
 name: "Worthing Boardgamers (Thursdays)"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: "7:00pm - 10:00pm"
 frequency: "Weekly"
 location:

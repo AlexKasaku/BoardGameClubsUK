@@ -1,8 +1,6 @@
 ---
 name: "Sheffield Board Games Club"
-day: "Tuesday"
-secondary_days:
-  - "Sunday"
+days: ["Tuesday", "Sunday"]
 time: "7:00pm - 11:00pm"
 frequency: "Weekly"
 location:

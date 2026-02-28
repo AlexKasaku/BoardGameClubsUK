@@ -1,7 +1,6 @@
 ---
 name: "St Albans Board Games Club"
-day: "Monday"
-secondary_days: ["Wednesday", "Saturday"]
+days: ["Monday", "Wednesday", "Saturday"]
 time: "7:00pm - 11:00pm"
 frequency: "Weekly"
 location:

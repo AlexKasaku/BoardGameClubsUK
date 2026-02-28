@@ -1,7 +1,6 @@
 ---
 name: "White House Games Night"
-day: "Tuesday"
-secondary_days: []
+days: ["Tuesday"]
 time: "6:30pm - 10:00pm"
 frequency: "Twice monthly"
 location:

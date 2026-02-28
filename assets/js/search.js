@@ -62,7 +62,7 @@
             club.location.name,
             club.location.address,
             club.description,
-            club.day,
+            club.days.join(" "),
           ]
             .filter(Boolean)
             .join(" ")
@@ -72,11 +72,7 @@
 
         // Day filter
         if (self.dayFilter) {
-          var matchesDay = club.day === self.dayFilter;
-          if (!matchesDay && club.secondary_days) {
-            matchesDay = club.secondary_days.indexOf(self.dayFilter) !== -1;
-          }
-          if (!matchesDay) return false;
+          if (club.days.indexOf(self.dayFilter) === -1) return false;
         }
 
         // Distance filter (only when location is set)

@@ -1,7 +1,6 @@
 ---
 name: "Wakefield Boardgame Meetup"
-day: "Tuesday"
-secondary_days: []
+days: ["Tuesday"]
 time: "5:30pm - 10:00pm"
 frequency: "Weekly"
 location:

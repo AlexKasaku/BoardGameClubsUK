@@ -1,7 +1,6 @@
 ---
 name: "Lanarkshire Gamers"
-day: "Saturday"
-secondary_days: []
+days: ["Saturday"]
 time: "12:00pm - 5:00pm"
 frequency: "Twice monthly"
 location:

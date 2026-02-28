@@ -1,7 +1,6 @@
 ---
 name: "Wakefield Warriors"
-day: "Tuesday"
-secondary_days: []
+days: ["Tuesday"]
 time: "7:15pm - late"
 frequency: "Weekly"
 location:

@@ -17,9 +17,10 @@ body:
       required: true
 
   - type: dropdown
-    id: day
+    id: days
     attributes:
-      label: What day do you meet?
+      label: What day(s) do you meet?
+      multiple: true
       options:
         - Monday
         - Tuesday
@@ -31,12 +32,6 @@ body:
         - Various
     validations:
       required: true
-
-  - type: input
-    id: secondary_days
-    attributes:
-      label: Any additional days?
-      placeholder: e.g. Friday, Sunday
 
   - type: input
     id: time

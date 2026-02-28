@@ -1,7 +1,6 @@
 ---
 name: "Board Game Thursdays at Hiver Taproom"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: "6:00pm"
 frequency: "Fortnightly"
 location:

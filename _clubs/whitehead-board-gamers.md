@@ -1,7 +1,6 @@
 ---
 name: "Whitehead Board Gamers"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: ""
 frequency: "Fortnightly"
 location:

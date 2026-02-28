@@ -1,7 +1,6 @@
 ---
 name: "North Wales Tabletop Games Club"
-day: "Monday"
-secondary_days: ["Wednesday", "Thursday"]
+days: ["Monday", "Wednesday", "Thursday"]
 time: "7:00pm - 11:00pm"
 frequency: "Weekly"
 location:

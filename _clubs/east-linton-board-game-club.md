@@ -1,7 +1,6 @@
 ---
 name: "East Linton Board Game Club"
-day: "Saturday"
-secondary_days: []
+days: ["Saturday"]
 time: "7:00pm onwards"
 frequency: "Monthly"
 location:

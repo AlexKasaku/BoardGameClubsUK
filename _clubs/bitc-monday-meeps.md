@@ -1,7 +1,6 @@
 ---
 name: "BITC Monday Meeps"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: "5:00pm - 11:00pm"
 frequency: "Weekly"
 location:

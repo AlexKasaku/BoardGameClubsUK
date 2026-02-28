@@ -1,7 +1,6 @@
 ---
 name: "Riverside Vineyard Table Top Games"
-day: "Friday"
-secondary_days: []
+days: ["Friday"]
 time: "7:00pm - 9:30pm"
 frequency: "Weekly"
 location:

@@ -1,7 +1,6 @@
 ---
 name: "Ireland Wood Games Community"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: "7:00pm - 9:45pm"
 frequency: "Weekly"
 location:

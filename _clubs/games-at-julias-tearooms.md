@@ -1,7 +1,6 @@
 ---
 name: "Games @ Julia's Tearooms"
-day: "Tuesday"
-secondary_days: []
+days: ["Tuesday"]
 time: "6:30pm - late"
 frequency: "Monthly"
 location:

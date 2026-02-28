@@ -1,7 +1,6 @@
 ---
 name: "Fareham and Gosport Board Game Lounge"
-day: "Friday"
-secondary_days: []
+days: ["Friday"]
 time: "7:00pm - late"
 frequency: "Twice monthly"
 location:

@@ -1,7 +1,6 @@
 ---
 name: "Ely Tabletop Games"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: "6:30pm - 10:00pm"
 frequency: "Weekly"
 location:

@@ -1,7 +1,6 @@
 ---
 name: "Horsforth Boardgamers"
-day: "Tuesday"
-secondary_days: []
+days: ["Tuesday"]
 time: "7:00pm - 11:00pm"
 frequency: "Twice monthly"
 location:

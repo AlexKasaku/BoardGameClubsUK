@@ -1,7 +1,6 @@
 ---
 name: "Rugby on Board"
-day: "Tuesday"
-secondary_days: []
+days: ["Tuesday"]
 time: "7:00pm - 10:00pm"
 frequency: "Weekly"
 location:

@@ -1,7 +1,6 @@
 ---
 name: "Wallingford Boardgames Society"
-day: "Wednesday"
-secondary_days: ["Tuesday"]
+days: ["Wednesday", "Tuesday"]
 time: "6:30pm - 10:00pm"
 frequency: "Weekly"
 location:

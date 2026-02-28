@@ -1,7 +1,6 @@
 ---
 name: "Furzedown Board Games"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: "7:00pm - 10:00pm"
 frequency: "Weekly"
 location:

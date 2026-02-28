@@ -1,7 +1,6 @@
 ---
 name: "Gather & Game Barnsley (Saturday)"
-day: "Saturday"
-secondary_days: []
+days: ["Saturday"]
 time: "From 6:00pm"
 frequency: "Fortnightly"
 location:

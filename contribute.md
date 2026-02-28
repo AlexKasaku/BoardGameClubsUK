@@ -35,8 +35,7 @@ Paste the following into your new file and fill in the details:
 ```yaml
 ---
 name: "Your Club Name"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: "7:00pm - 10:00pm"
 frequency: "Weekly"
 location:
@@ -61,8 +60,7 @@ description: >-
 | Field | Description |
 |-------|-------------|
 | `name` | Your club's full name |
-| `day` | The primary day you meet (Monday through Sunday, or "Various" for ad hoc clubs) |
-| `secondary_days` | Additional days, e.g. `["Friday", "Sunday"]` |
+| `days` | Array of days you meet, e.g. `["Thursday"]` or `["Monday", "Friday"]` |
 | `time` | When you meet, e.g. "7:00pm - 10:00pm" |
 | `frequency` | "Weekly", "Fortnightly", "Monthly", or "Ad-hoc" |
 | `location` | Venue name, full address, and coordinates |

@@ -1,7 +1,6 @@
 ---
 name: "Beyond Monopoly"
-day: "Saturday"
-secondary_days: ["Friday"]
+days: ["Saturday", "Friday"]
 time: "10:00am - 9:00pm (1st & 3rd Saturdays; also 2nd & 4th Friday evenings 5pm-9pm)"
 frequency: "Fortnightly"
 location:

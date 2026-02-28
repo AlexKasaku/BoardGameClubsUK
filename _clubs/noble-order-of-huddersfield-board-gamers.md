@@ -1,7 +1,6 @@
 ---
 name: "Noble Order of Huddersfield Board Gamers"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: "7:00pm - 10:30pm"
 frequency: "Weekly"
 location:

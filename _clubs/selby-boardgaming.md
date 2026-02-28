@@ -1,7 +1,6 @@
 ---
 name: "Selby Boardgaming"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: ""
 frequency: "Weekly"
 location:

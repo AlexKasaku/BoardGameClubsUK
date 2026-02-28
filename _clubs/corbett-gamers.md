@@ -1,7 +1,6 @@
 ---
 name: "Corbett Gamers"
-day: "Monday"
-secondary_days: ["Thursday"]
+days: ["Monday", "Thursday"]
 time: "7:30pm - 10:30pm"
 frequency: "Every 3.5 weeks"
 location:

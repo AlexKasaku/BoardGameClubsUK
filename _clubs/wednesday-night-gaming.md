@@ -1,7 +1,6 @@
 ---
 name: "Wednesday Night Gaming"
-day: "Wednesday"
-secondary_days: []
+days: ["Wednesday"]
 time: "6:00pm - 11:00pm"
 frequency: "Weekly"
 location:

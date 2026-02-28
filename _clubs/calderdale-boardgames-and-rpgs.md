@@ -1,7 +1,6 @@
 ---
 name: "Calderdale Boardgames and Role Playing Games"
-day: "Wednesday"
-secondary_days: []
+days: ["Wednesday"]
 time: "7:00pm - 11:00pm"
 frequency: "Weekly"
 location:

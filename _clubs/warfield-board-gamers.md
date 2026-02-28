@@ -1,7 +1,6 @@
 ---
 name: "Warfield Board Gamers"
-day: "Wednesday"
-secondary_days: ["Friday"]
+days: ["Wednesday", "Friday"]
 time: "7:00pm - 11:00pm"
 frequency: "Weekly"
 location:

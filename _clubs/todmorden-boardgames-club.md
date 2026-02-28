@@ -1,7 +1,6 @@
 ---
 name: "Todmorden Boardgames Club"
-day: "Thursday"
-secondary_days: ["Saturday"]
+days: ["Thursday", "Saturday"]
 time: "7:00pm - 11:00pm"
 frequency: "Weekly"
 location:

@@ -1,8 +1,6 @@
 ---
 name: "Ruislip BGGs"
-day: "Monday"
-secondary_days:
-  - "Wednesday"
+days: ["Monday", "Wednesday"]
 time: "8:00pm - 11:00pm"
 frequency: "Weekly"
 location:

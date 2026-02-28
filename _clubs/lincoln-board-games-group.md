@@ -1,7 +1,6 @@
 ---
 name: "Lincoln Board Games Group"
-day: "Tuesday"
-secondary_days: ["Thursday", "Sunday"]
+days: ["Tuesday", "Thursday", "Sunday"]
 time: "7:00pm - 11:00pm"
 frequency: "Weekly"
 location:

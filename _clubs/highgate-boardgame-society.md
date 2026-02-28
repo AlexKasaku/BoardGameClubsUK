@@ -1,7 +1,6 @@
 ---
 name: "Highgate Boardgame Society"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: "7:30pm"
 frequency: "Weekly"
 location:

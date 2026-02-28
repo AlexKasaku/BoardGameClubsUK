@@ -1,7 +1,6 @@
 ---
 name: "Ilkley Board Gamers"
-day: "Wednesday"
-secondary_days: ["Sunday"]
+days: ["Wednesday", "Sunday"]
 time: "From 7:00pm (18+ only, not wheelchair accessible)"
 frequency: "Weekly"
 location:

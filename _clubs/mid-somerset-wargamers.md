@@ -1,7 +1,6 @@
 ---
 name: "Mid Somerset Wargamers"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: "7:00pm"
 frequency: "Weekly"
 location:

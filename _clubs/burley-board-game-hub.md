@@ -1,7 +1,6 @@
 ---
 name: "Burley Board Game Hub"
-day: "Various"
-secondary_days: []
+days: ["Various"]
 time: "Afternoons"
 frequency: "Ad-hoc"
 location:

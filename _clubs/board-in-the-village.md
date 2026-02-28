@@ -1,7 +1,6 @@
 ---
 name: "Board in the Village"
-day: "Wednesday"
-secondary_days: []
+days: ["Wednesday"]
 time: ""
 frequency: "Weekly"
 location:

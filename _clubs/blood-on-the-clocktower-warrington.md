@@ -1,7 +1,6 @@
 ---
 name: "Wolves of Ravenswood"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: "7:00pm"
 frequency: "Monthly"
 location:

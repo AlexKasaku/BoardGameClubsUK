@@ -1,7 +1,6 @@
 ---
 name: "Longrest Boardgame Bar + Cafe"
-day: "Monday"
-secondary_days: ["Thursday"]
+days: ["Monday", "Thursday"]
 time: ""
 frequency: "Weekly"
 location:

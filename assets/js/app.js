@@ -94,13 +94,10 @@
 
     var html = clubs
       .map(function (club) {
-        var tags = '<span class="tag tag-day">' + escapeHtml(club.day) + "</span>";
-
-        if (club.secondary_days) {
-          club.secondary_days.forEach(function (d) {
-            tags += '<span class="tag tag-day">' + escapeHtml(d) + "</span>";
-          });
-        }
+        var tags = "";
+        club.days.forEach(function (d) {
+          tags += '<span class="tag tag-day">' + escapeHtml(d) + "</span>";
+        });
 
         if (club.frequency && club.frequency !== "Weekly") {
           tags += '<span class="tag">' + escapeHtml(club.frequency) + "</span>";
@@ -126,6 +123,14 @@
           icon = '<div class="club-icon-wrap"><img src="' + imgSrc + '" alt="" loading="lazy" onload="window.GameClub.applyImgBg(this)"></div>';
         }
 
+        var venue = club.location && club.location.name
+          ? '<div class="club-venue"><i data-lucide="map-pin"></i>' + escapeHtml(club.location.name) + "</div>"
+          : "";
+
+        var meta = venue
+          ? '<div class="club-card-meta">' + venue + "</div>"
+          : "";
+
         return (
           '<a class="club-card" href="' +
           escapeHtml(club.url) +
@@ -139,10 +144,11 @@
           "</div>" +
           distanceBadge +
           "</div>" +
+          meta +
+          "</div>" +
+          "</div>" +
           '<div class="club-tags">' +
           tags +
-          "</div>" +
-          "</div>" +
           "</div>" +
           "</a>"
         );
@@ -150,6 +156,7 @@
       .join("");
 
     container.innerHTML = html;
+    if (window.lucide) lucide.createIcons();
   }
 
   function updateResultCount(shown, total) {
@@ -158,7 +165,7 @@
 
     var text;
     if (shown === total) {
-      text = total + " clubs";
+      text = "Showing " + total + " clubs";
     } else {
       text = "Showing " + shown + " of " + total + " clubs";
     }

@@ -3,8 +3,7 @@
     <div class="club-name">{{ club.name }}</div>
   </div>
   <div class="club-tags">
-    <span class="tag tag-day">{{ club.day }}</span>
-    {% for d in club.secondary_days %}
+    {% for d in club.days %}
       <span class="tag tag-day">{{ d }}</span>
     {% endfor %}
     {% if club.frequency and club.frequency != "Weekly" %}

@@ -1,7 +1,6 @@
 ---
 name: "East Leeds RPG, Board Games & Warhammer"
-day: "Tuesday"
-secondary_days: []
+days: ["Tuesday"]
 time: "6:00pm - 11:00pm"
 frequency: "Weekly"
 location:

@@ -1,7 +1,6 @@
 ---
 name: "Portsmouth On Board (Fridays)"
-day: "Friday"
-secondary_days: []
+days: ["Friday"]
 time: "12:00pm"
 frequency: "Monthly"
 location:

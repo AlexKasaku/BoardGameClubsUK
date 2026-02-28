@@ -1,7 +1,6 @@
 ---
 name: "Halifax Board Gamers"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: "7:00pm - 10:30pm"
 frequency: "Weekly"
 location:

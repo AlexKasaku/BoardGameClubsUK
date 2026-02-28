@@ -1,7 +1,6 @@
 ---
 name: "Headingley Games Club"
-day: "Thursday"
-secondary_days: []
+days: ["Thursday"]
 time: "Doors 6:30pm, games from 7:00pm, finish ~10:30pm"
 frequency: "Weekly"
 location:

@@ -1,7 +1,6 @@
 ---
 name: "Oddboarders"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: "7:00pm - 11:00pm"
 frequency: "Weekly"
 location:

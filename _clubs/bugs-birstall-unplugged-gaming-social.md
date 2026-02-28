@@ -1,7 +1,6 @@
 ---
 name: "BUGS - Birstall Unplugged Gaming Social"
-day: "Monday"
-secondary_days: []
+days: ["Monday"]
 time: ""
 frequency: "Weekly"
 location:

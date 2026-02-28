@@ -1,7 +1,6 @@
 ---
 name: "Pudsey and Farsley Board Game Club"
-day: "Friday"
-secondary_days: []
+days: ["Friday"]
 time: "6:00pm - 10:00pm"
 frequency: "Weekly"
 location:
