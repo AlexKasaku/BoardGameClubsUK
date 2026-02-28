@@ -6,6 +6,7 @@
 # Usage: ruby scripts/validate_clubs.rb
 
 require "yaml"
+require "date"
 
 VALID_DAYS = %w[Monday Tuesday Wednesday Thursday Friday Saturday Sunday Various].freeze
 LAT_RANGE = (49.0..61.0)
