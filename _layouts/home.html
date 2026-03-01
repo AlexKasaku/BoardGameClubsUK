@@ -46,17 +46,21 @@
             <div class="location-suggestions" id="location-suggestions-mobile"></div>
           </div>
           <div class="filter-row">
-            <select class="filter-select" id="day-filter">
-              <option value="">All days</option>
-              <option value="Monday">Monday</option>
-              <option value="Tuesday">Tuesday</option>
-              <option value="Wednesday">Wednesday</option>
-              <option value="Thursday">Thursday</option>
-              <option value="Friday">Friday</option>
-              <option value="Saturday">Saturday</option>
-              <option value="Sunday">Sunday</option>
-              <option value="Various">Various</option>
-            </select>
+            <div class="multi-select" id="day-filter">
+              <button class="multi-select-toggle filter-select" type="button" aria-haspopup="listbox" aria-expanded="false">
+                <span class="multi-select-label">All days</span>
+              </button>
+              <div class="multi-select-dropdown" role="listbox" aria-label="Filter by day">
+                <label class="multi-select-option" data-day="Monday"><input type="checkbox" value="Monday"><span class="multi-select-check"></span>Monday</label>
+                <label class="multi-select-option" data-day="Tuesday"><input type="checkbox" value="Tuesday"><span class="multi-select-check"></span>Tuesday</label>
+                <label class="multi-select-option" data-day="Wednesday"><input type="checkbox" value="Wednesday"><span class="multi-select-check"></span>Wednesday</label>
+                <label class="multi-select-option" data-day="Thursday"><input type="checkbox" value="Thursday"><span class="multi-select-check"></span>Thursday</label>
+                <label class="multi-select-option" data-day="Friday"><input type="checkbox" value="Friday"><span class="multi-select-check"></span>Friday</label>
+                <label class="multi-select-option" data-day="Saturday"><input type="checkbox" value="Saturday"><span class="multi-select-check"></span>Saturday</label>
+                <label class="multi-select-option" data-day="Sunday"><input type="checkbox" value="Sunday"><span class="multi-select-check"></span>Sunday</label>
+                <label class="multi-select-option" data-day="Various"><input type="checkbox" value="Various"><span class="multi-select-check"></span>Various</label>
+              </div>
+            </div>
             <select class="filter-select" id="distance-filter" disabled>
               <option value="">Any distance</option>
               <option value="5">Within 5 miles</option>

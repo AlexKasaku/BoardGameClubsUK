@@ -28,7 +28,6 @@
     var params = readUrlParams();
     var searchInput = document.getElementById("search-input");
     var searchInputMobile = document.getElementById("search-input-mobile");
-    var dayFilter = document.getElementById("day-filter");
     var distanceFilter = document.getElementById("distance-filter");
 
     if (params.q) {
@@ -36,9 +35,16 @@
       if (searchInput) searchInput.value = params.q;
       if (searchInputMobile) searchInputMobile.value = params.q;
     }
-    if (params.day) {
-      search.setDayFilter(params.day);
-      if (dayFilter) dayFilter.value = params.day;
+    if (params.days && params.days.length > 0) {
+      search.setDayFilters(params.days);
+      // Check matching checkboxes in multi-select
+      var checkboxes = document.querySelectorAll("#day-filter input[type='checkbox']");
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (params.days.indexOf(checkboxes[i].value) !== -1) {
+          checkboxes[i].checked = true;
+        }
+      }
+      updateDayFilterLabel();
     }
     if (params.distance) {
       search.setMaxDistance(params.distance);
@@ -48,25 +54,31 @@
 
   function readUrlParams() {
     var params = new URLSearchParams(window.location.search);
+    var daysStr = params.get("days") || "";
+    // Backward compat: support old ?day= single param
+    if (!daysStr) {
+      var singleDay = params.get("day") || "";
+      if (singleDay) daysStr = singleDay;
+    }
+    var days = daysStr ? daysStr.split(",").filter(function (d) { return d; }) : [];
     return {
       q: params.get("q") || "",
-      day: params.get("day") || "",
+      days: days,
       distance: params.get("distance") || ""
     };
   }
 
   function writeUrlParams() {
     var searchInput = document.getElementById("search-input");
-    var dayFilter = document.getElementById("day-filter");
     var distanceFilter = document.getElementById("distance-filter");
 
     var params = new URLSearchParams();
     var q = searchInput ? searchInput.value.trim() : "";
-    var day = dayFilter ? dayFilter.value : "";
+    var days = search.dayFilters.join(",");
     var distance = distanceFilter ? distanceFilter.value : "";
 
     if (q) params.set("q", q);
-    if (day) params.set("day", day);
+    if (days) params.set("days", days);
     if (distance) params.set("distance", distance);
 
     var newUrl = window.location.pathname + (params.toString() ? "?" + params.toString() : "");
@@ -181,10 +193,25 @@
     el.textContent = text;
   }
 
+  function updateDayFilterLabel() {
+    var label = document.querySelector("#day-filter .multi-select-label");
+    if (!label) return;
+    var days = search.dayFilters;
+    if (days.length === 0) {
+      label.textContent = "All days";
+    } else if (days.length === 1) {
+      label.textContent = days[0];
+    } else {
+      label.textContent = days.length + " days selected";
+    }
+  }
+
   function bindEvents() {
     var searchInput = document.getElementById("search-input");
     var searchInputMobile = document.getElementById("search-input-mobile");
-    var dayFilter = document.getElementById("day-filter");
+    var dayFilterEl = document.getElementById("day-filter");
+    var dayToggle = dayFilterEl ? dayFilterEl.querySelector(".multi-select-toggle") : null;
+    var dayCheckboxes = dayFilterEl ? dayFilterEl.querySelectorAll("input[type='checkbox']") : [];
     var distanceFilter = document.getElementById("distance-filter");
 
     // Sync both search inputs
@@ -208,13 +235,30 @@
       });
     }
 
-    // Day filter
-    if (dayFilter) {
-      dayFilter.addEventListener("change", function () {
-        search.setDayFilter(dayFilter.value);
+    // Day filter multi-select dropdown
+    if (dayToggle) {
+      dayToggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var isOpen = dayFilterEl.classList.toggle("is-open");
+        dayToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+
+    for (var i = 0; i < dayCheckboxes.length; i++) {
+      dayCheckboxes[i].addEventListener("change", function () {
+        search.toggleDayFilter(this.value);
+        updateDayFilterLabel();
         update();
       });
     }
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (e) {
+      if (dayFilterEl && !dayFilterEl.contains(e.target)) {
+        dayFilterEl.classList.remove("is-open");
+        if (dayToggle) dayToggle.setAttribute("aria-expanded", "false");
+      }
+    });
 
     // Distance filter
     if (distanceFilter) {

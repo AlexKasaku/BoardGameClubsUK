@@ -4,7 +4,7 @@
   var GameClubSearch = {
     allClubs: [],
     searchQuery: "",
-    dayFilter: "",
+    dayFilters: [],
     maxDistance: 0,
     userLat: null,
     userLng: null,
@@ -18,8 +18,17 @@
       this.searchQuery = query.toLowerCase().trim();
     },
 
-    setDayFilter: function (day) {
-      this.dayFilter = day;
+    setDayFilters: function (days) {
+      this.dayFilters = days || [];
+    },
+
+    toggleDayFilter: function (day) {
+      var idx = this.dayFilters.indexOf(day);
+      if (idx === -1) {
+        this.dayFilters.push(day);
+      } else {
+        this.dayFilters.splice(idx, 1);
+      }
     },
 
     setMaxDistance: function (miles) {
@@ -70,9 +79,16 @@
           if (haystack.indexOf(self.searchQuery) === -1) return false;
         }
 
-        // Day filter
-        if (self.dayFilter) {
-          if (club.days.indexOf(self.dayFilter) === -1) return false;
+        // Day filter (OR logic: club passes if it matches any selected day)
+        if (self.dayFilters.length > 0) {
+          var matchesDay = false;
+          for (var i = 0; i < self.dayFilters.length; i++) {
+            if (club.days.indexOf(self.dayFilters[i]) !== -1) {
+              matchesDay = true;
+              break;
+            }
+          }
+          if (!matchesDay) return false;
         }
 
         // Distance filter (only when location is set)
